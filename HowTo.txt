@@ -21,7 +21,8 @@ If you want to apply kind of animation to your view, Kindly follow below steps:
 	</com.android.example.flips.FlipView>
 3) Copy all classes from AbhanFlipView\src\com\android\example\flips folder and put into your directory
 4) Copy FlipAdapter class and use your layout file (Whatever you want to see on device screen) into that.
-5) Implements this callback (OnFlipListener from FlipView) to your activity - Here you can do whatever you want after fliping done on your view
+5) Implements this callback (OnFlipListener from FlipView) to your activity - Here you can do whatever you want after
+   fliping done on your view
 6) Handle user interaction by implementing following listeners in your activity
 
 	public class AbhanActivity extends Activity implements OnFlipListener {
