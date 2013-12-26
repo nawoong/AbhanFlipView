@@ -1,0 +1,53 @@
+							FlipView
+							========
+
+1) Import "JWNineOldAnimation" project as Android Existing Application
+2) Import "AbhanFlipView" project as Android Existing Application
+3) Run demo for better understanding
+
+
+If you want to apply kind of animation to your view, Kindly follow below steps:
+
+1) Copy "attrs.xml" and put into your values folder
+2) Use FlipView as a parent layout and use this layout as a main layout in your activity (Do not put anything inside that)
+	<?xml version="1.0" encoding="utf-8"?>
+	<com.android.example.flips.FlipView xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:flipview="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/flip_view"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="@null"
+		flipview:orientation="vertical" >
+	</com.android.example.flips.FlipView>
+3) Copy all classes from AbhanFlipView\src\com\android\example\flips folder and put into your directory
+4) Copy FlipAdapter class and use your layout file (Whatever you want to see on device screen) into that.
+5) Implements this callback (OnFlipListener from FlipView) to your activity - Here you can do whatever you want after fliping done on your view
+6) Handle user interaction by implementing following listeners in your activity
+
+	public class AbhanActivity extends Activity implements OnFlipListener {
+	
+	private FlipView flipView;
+	private FlipAdapter adapter;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_abhan);
+		
+		flipView = (FlipView) findViewById(R.id.flip_view);
+		adapter = new FlipAdapter(this);
+		flipView.setAdapter(adapter);
+		flipView.setOnFlipListener(this);
+		flipView.peakNext(false);
+	}
+
+	@Override
+	public void onFlippedToPage(FlipView view, int position, long id) {
+		android.util.Log.i("Abhan", "I am called");
+	}
+}
+
+
+Special Thanks
+==============
+	To "Jake Wharton" for making such marvellous thing : https://github.com/JakeWharton/NineOldAndroids

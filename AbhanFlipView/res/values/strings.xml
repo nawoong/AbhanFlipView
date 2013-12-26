@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Abhan Flip</string>
+	<string name="first">Start</string>
+    <string name="last">End</string>
+    <string name="start">Swipe Down</string>
+    <string name="end">Swipe Up</string>
+</resources>
