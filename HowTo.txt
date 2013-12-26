@@ -52,3 +52,4 @@ If you want to apply kind of animation to your view, Kindly follow below steps:
 Special Thanks
 ==============
 	To "Jake Wharton" for making such marvellous thing : https://github.com/JakeWharton/NineOldAndroids
+	To "Emil Sjölander" for making such marvellous thing: https://github.com/emilsjolander/android-FlipView
